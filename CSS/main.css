@@ -1,0 +1,193 @@
+#editPassword{
+    display:none;
+
+}
+
+#personalArea{
+    position: relative;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    font-size: 1em;
+    background-color: #E05D5D;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2%;
+    box-shadow: 0px 1px 4px #00000088;
+}
+
+nav>:nth-child(n) {
+    /* margin: auto calc((45%-var(--font-size)*2)); */
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+#logoPic{
+    position:sticky;
+    top: 0;
+    right:0;
+    z-index: 12;
+    width:90px;
+    border-radius: 50px;
+}
+
+#searchForm{
+    display:flex;
+}
+
+#searchForm input{
+    font-size: 1.5em;
+    border-color: #FFF8E5;
+    color:#FFF8E5;
+    height: fit-content;
+    align-self: center;
+}
+
+form input,
+form button {
+    background-color: inherit;
+    font-size: 1em;
+    color: inherit;
+    text-align: inherit;
+    line-height: 1.5em;
+}
+
+form input {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-radius: 0;
+    outline: 0;
+}
+
+aside#right{
+    padding: 0 5%;
+    display: inline-block;
+    width: fit-content;
+    position: fixed;
+    height: 80vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contactPersonDetails,
+.contactPersonEdit{
+    margin:2%;
+    width: 60%;
+    display: inline-block;
+    background-color: #FFF8E5;
+    font-size: 1.7em;
+    line-height: normal;
+    position: relative;
+    box-shadow: 0px 1px 4px #00000088;
+}
+
+.contactPersonEdit{
+    display:none;
+}
+
+.contactPersonDetails .iconBtn{
+    position:absolute;
+    top:70%;
+    color: #00A19D;
+}
+
+.contactPersonDetails .iconBtn:hover{
+    transition: 0.5s;
+    color:#FFB344;
+}
+
+.contactPersonDetails .iconBtn.fa-pen{
+    left:10%;
+}
+
+.contactPersonDetails .iconBtn.fa-trash-can{
+    left:5%;
+}
+
+#addContactPerson{
+    margin-top: 70vh;
+}
+
+nav .userName{
+    font-size: 1.5em;
+    margin: auto 5%;
+}
+
+#addNewContactPerson{
+    position: fixed;
+    top: 160px;
+    right: 10px;
+    background-color: white;
+    border: solid 3px #FFB344;
+    box-shadow: 0px 1px 4px #00000088;
+    padding: 5vh 1%;
+    min-height: 450px;
+    box-sizing: border-box;
+}
+
+#personalDetails{
+    position:fixed;
+    top:10vh;
+    left:0;
+    margin:5%;
+    max-width:90%;
+    width:fit-content;
+    padding: 0 5%;
+    height: 70vh;
+    background-color:white;
+    border: solid 3px #FFB344;
+    box-shadow: 0px 1px 4px #00000088;
+    line-height: normal;
+}
+
+#personalDetails h5,
+#personalDetails i{
+    font-size: 1.5em;
+}
+
+#personalDetails #editPersonalDetails{
+    min-height: 70%;
+    margin: 15% 0;
+    line-height: 2;
+    display: none;
+}
+
+#personalDetails #showPersonalDetails{
+    font-size: 1.5em;
+}
+
+#personalDetails #showPersonalDetails i{
+    font-size: 1em;
+}
+
+#exitAccount{
+    position: absolute;
+    top: 1%;
+    left:1%;
+}
+
+.fa-arrow-right{
+    display: none;
+    position: absolute;
+    top: 1%;
+    right: 10%;
+}
+
+.cancelEditContacatPerson{
+    position: absolute;
+    bottom: 1%;
+    left:1%;
+}
+
+.contactPersonEditBtn{
+    position: absolute;
+    bottom: 30%;
+    left: 1%;
+}

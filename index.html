@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/welcome.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="icon" href="./IMAGES/LOGO.svg" border-radios="100px;">
+    <title>Ucontacts</title>
+</head>
+
+<body dir="rtl">
+    <main></main>
+
+    <template class="page" id="registrationTemplate">
+        <div class="welcomePage">
+            <form id="registrationForm" submit="false">
+                <div><i class="fa-solid fa-caret-right"></i>
+                    <p class="profile-pic userProfile"></p><i class="fa-solid fa-caret-left"></i>
+                </div>
+                <label for="nameRegistration"><i class="fa-solid fa-circle-user"></i></label>
+                <input type="text" required id="nameRegistration" placeholder="שם">
+                <br>
+                <label for="mailRegistration"><i class="fa-solid fa-envelope"></i></label>
+                <input type="mail" required id="mailRegistration" placeholder="כתובת המייל">
+                <br>
+                <label for="mobileRegistration"><i class="fa-solid fa-mobile-screen-button"></i></label>
+                <input type="text" required id="mobileRegistration" minlength="10" maxlength="10" placeholder="פלאפון">
+                <br>
+                <label for="landlineRegistration"><i class="fa-solid fa-phone"></i></label>
+                <input type="text" id="landlineRegistration" minlength="9" maxlength="9" placeholder="טלפון">
+                <br>
+                <label for="passwordRegistration"><i class="fa-solid fa-lock"></i></label>
+                <input type="password" required id="passwordRegistration" minlength="4" placeholder="סיסמה">
+                <br>
+                <label for="checkPasswordRegistration"><i class="fa-solid fa-lock"></i></label>
+                <input type="password" required id="checkPasswordRegistration" minlength="4" placeholder="בדיקת הסיסמה">
+                <br>
+                <button type="submit" id="registrationBtn" class="formBtn">הרשמה</button>
+            </form>
+            <h1 class="welcomeGreeting">ברוכים הבאים</h1>
+            <div class="aPsition" id="passToLoginBtn"><a href="" data-linkTo="login" class="links">לעמוד הכניסה >></a>
+            </div>
+        </div>
+    </template>
+
+    <template class="page" id="loginTemplate">
+        <div class="welcomePage">
+            <h1 class="welcomeGreeting">ברוכים השבים</h1>
+            <div class="aPsition" id="passToRegistrationBtn"><a href="" data-linkTo="registration" class="links">לעמוד
+                    ההרשמה >></a></div>
+            <form id="loginForm" submit="false">
+                <label for="mailLogin"><i class="fa-solid fa-envelope"></i></label>
+                <input type="mail" required id="mailLogin" placeholder="כתובת המייל">
+                <br>
+                <label for="passwordLogin"><i class="fa-solid fa-lock"></i></label>
+                <input type="password" required id="passwordLogin" minlength="4" placeholder="סיסמה">
+                <br>
+                <button type="submit" id="loginBtn" class="formBtn">כניסה</button>
+            </form>
+        </div>
+    </template>
+
+    <template class="page" id="personalAreaTemplate">
+        <div id="personalArea">
+            <nav>
+                <img id="logoPic" src="./IMAGES/LOGO1.svg" alt="logo">
+                <form id="searchForm" submit="false">
+                    <input type="search" required placeholder="חפש/י איש קשר">
+                    <button type="submit" id="searchBtn" class="formBtn"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <h5 class="userName"></h5>
+                <p class="profile-pic userProfile"></p>
+            </nav>
+            <aside id="right">
+                <button class="iconBtn"><i class="fa-solid fa-arrow-right"></i></button>
+                <button id="addContactPerson" class="iconBtn"><i class="fa-solid fa-user-plus"></i></button>
+                <button id="clearAllContacts" class="iconBtn"><i class="fa-solid fa-trash-can"></i>נקה הכל</button>
+            </aside>
+            <article>
+            </article>
+            <aside id="left">
+                <a id="loadMore">טען עוד...</a>
+            </aside>
+        </div>
+    </template>
+
+    <template id="personalDetailsTemplate">
+        <div id="personalDetails">
+            <div id="showPersonalDetails">
+                <h5 class="userProfile"></h5>
+                <h5 class="userName"></h5>
+                <h6 class="userEmail"></h6>
+                <h6 class="userMobile"></h6>
+                <h6 class="userLandline"></h6>
+                <button id="deleteAccount" class="iconBtn"><i class="fa-solid fa-trash-can"></i>מחיקת חשבון</button>
+                <button id="exitAccount" class="iconBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                <button id="editAccountBtn" class="iconBtn"><i class="fa-solid fa-pen"></i></button>
+            </div>
+            <div id="editPersonalDetails">
+                <form id="editPersonalDetailsForm" submit="false">
+                    <div><i class="fa-solid fa-caret-right"></i>
+                        <p class="profile-pic userProfile"></p><i class="fa-solid fa-caret-left"></i>
+                    </div>
+                    <label for="nameEditUser"><i class="fa-solid fa-circle-user"></i></label>
+                    <input type="text" id="nameEditUser" placeholder="שם">
+                    <br>
+                    <h6 class="userEmail"></h6>
+                    <label for="mobileEditUser"><i class="fa-solid fa-mobile-screen-button"></i></label>
+                    <input type="text" id="mobileEditUser" minlength="10" maxlength="10" placeholder="פלאפון">
+                    <br>
+                    <label for="landlineEditUser"><i class="fa-solid fa-phone"></i></label>
+                    <input type="text" id="landlineEditUser" minlength="9" maxlength="9" placeholder="טלפון">
+                    <br>
+                    <button id="openEditPassword" class="formBtn">שינוי סיסמה</button>
+                    <div id="editPassword">
+                        <label for="currentPasswordEditUser"><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="currentPasswordEditUser" minlength="4" placeholder="סיסמה נוכחית">
+                        <br>
+                        <label for="newPasswordEditUser"><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="newPasswordEditUser" minlength="4" placeholder="סיסמה חדשה">
+                        <br>
+                        <label for="chekNewPasswordEditUser"><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="chekNewPasswordEditUser" minlength="4"
+                            placeholder="בדיקת סיסמה חדשה">
+                        <br>
+                    </div>
+                    <button type="submit" id="editPersonalDetailsBtn" class="formBtn">שמור</button>
+                </form>
+                <button id="cancelEditPersonalDetailsBtn" class="formBtn">ביטול</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="addNewContactPersonTemplate">
+        <div id="addNewContactPerson">
+            <form id="addNewContactPersonForm" submit="false">
+                <label for="nameNewContact"><i class="fa-solid fa-circle-user"></i></label>
+                <input type="text" required id="nameNewContact" placeholder="שם">
+                <br>
+                <label for="mailNewContact"><i class="fa-solid fa-envelope"></i></label>
+                <input type="mail" required id="mailNewContact" placeholder="כתובת המייל">
+                <br>
+                <label for="mobileNewContact"><i class="fa-solid fa-mobile-screen-button"></i></label>
+                <input type="text" required id="mobileNewContact" minlength="10" maxlength="10" placeholder="פלאפון">
+                <br>
+                <label for="landlineNewContact"><i class="fa-solid fa-phone"></i></label>
+                <input type="text" id="landlineNewContact" minlength="9" maxlength="9" placeholder="טלפון">
+                <br>
+                <label for="commentNewContact"><i class="fa-regular fa-comment-dots"></i></label>
+                <textarea type="text" id="commentNewContact" placeholder="הערה..."></textarea>
+                <button type="submit" id="addNewContactPersonBtn" class="formBtn">הוספה</button>
+            </form>
+            <button class="formBtn" id="cancelNewContactPersonBtn">ביטול</button>
+        </div>
+    </template>
+
+    <template id="contactPersonTemplate">
+        <div class="contactPerson">
+            <div class="contactPersonDetails">
+                <h6 class="contactPersonName"></h6>
+                <h6 class="contactPersonEmail"></h6>
+                <h6 class="contactPersonMobile"></h6>
+                <h6 class="contactPersonLandline"></h6>
+                <p class="contactPersonComment"></p>
+                <i class="fa-solid fa-trash-can iconBtn"></i>
+                <i class="fa-solid fa-pen iconBtn"></i>
+            </div>
+            <div class="contactPersonEdit">
+                <form class="contactPersonEditForm" submit="false">
+                    <label class="nameContactPersonEdit"><i class="fa-solid fa-circle-user"></i></label>
+                    <input type="text" required class="nameContactPersonEdit" placeholder="שם">
+                    <br>
+                    <label class="mailContactPersonEdit"><i class="fa-solid fa-envelope"></i></label>
+                    <input type="mail" required class="mailContactPersonEdit" placeholder="כתובת המייל">
+                    <br>
+                    <label class="mobileContactPersonEdit"><i class="fa-solid fa-mobile-screen-button"></i></label>
+                    <input type="text" required class="mobileContactPersonEdit" minlength="10" maxlength="10"
+                        placeholder="פלאפון">
+                    <br>
+                    <label class="landlineContactPersonEdit"><i class="fa-solid fa-phone"></i></label>
+                    <input type="text" class="landlineContactPersonEdit" minlength="9" maxlength="9"
+                        placeholder="טלפון">
+                    <br>
+                    <label class="commentContactPersonEdit"><i class="fa-regular fa-comment-dots"></i></label>
+                    <textarea type="text" class="commentContactPersonEdit" placeholder="הערה..."></textarea>
+                    <button type="submit" class="contactPersonEditBtn formBtn">שמור</button>
+                </form>
+                <button class="cancelEditContacatPerson formBtn">ביטול</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="./JS/dataBase.js"></script>
+    <script src="./JS/network.js"></script>
+    <script src="./JS/classes.js"></script>
+    <script src="./JS/server.js"></script>
+    <script src="./JS/client.js"></script>
+</body>
+
+</html>
